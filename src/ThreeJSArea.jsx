@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import * as THREE from "three";
-import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
-import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
-import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
-import { RGBShiftShader } from "three/addons/shaders/RGBShiftShader.js";
-import { GammaCorrectionShader } from "three/addons/shaders/GammaCorrectionShader.js";
-import { FilmPass } from "three/addons/postprocessing/FilmPass.js";
+// import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+// import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+// import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+// import { RGBShiftShader } from "three/addons/shaders/RGBShiftShader.js";
+// import { GammaCorrectionShader } from "three/addons/shaders/GammaCorrectionShader.js";
+// import { FilmPass } from "three/addons/postprocessing/FilmPass.js";
 
 function ThreeJSArea({ id = "" }) {
   const [mount, setMount] = useState(null);
