@@ -3,7 +3,7 @@ import "./App.css";
 import ThreeJSArea from "./ThreeJSArea";
 import { gsap } from "gsap";
 import Header from "./Header";
-import MoreButton from "./Morebutton";
+import MoreButton from "./MoreButton";
 
 function App() {
   const tl = new gsap.timeline();
