@@ -20,8 +20,8 @@ function App() {
     tl.to("#test", { opacity: 1, duration: 3, ease: "slow" }, 1);
     tl.fromTo(
       "header",
-      { opacity: 0 },
-      { opacity: 1, duration: 2, ease: "power2.inOut" },
+      { y: -50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 2, ease: "power2.inOut" },
       2
     );
   };
