@@ -21,3 +21,31 @@ html {
 body {
   background-color: black;
 }
+
+::selection {
+  background-color: mediumspringgreen;
+  color: black;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: mediumspringgreen;
+  color: black;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: mediumspringgreen;
+  color: black;
+}
+
+::-ms-selection {
+  background-color: mediumspringgreen;
+  color: black;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: mediumspringgreen;
+  color: black;
+}
