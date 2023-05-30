@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import * as THREE from "three";
-// import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
-// import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
-// import { BokehPass } from "three/addons/postprocessing/BokehPass.js";
-// import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
-// import { GammaCorrectionShader } from "three/addons/shaders/GammaCorrectionShader.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+import { RGBShiftShader } from "three/addons/shaders/RGBShiftShader.js";
+import { GammaCorrectionShader } from "three/addons/shaders/GammaCorrectionShader.js";
+import { FilmPass } from "three/addons/postprocessing/FilmPass.js";
 
 function ThreeJSArea({ id = "" }) {
   const [mount, setMount] = useState(null);
@@ -18,7 +19,7 @@ function ThreeJSArea({ id = "" }) {
     let height = mount.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x000000, 0.04);
+    scene.fog = new THREE.FogExp2(0x000000, 0.05);
 
     const renderer = new THREE.WebGL1Renderer({ antialias: true });
     renderer.setSize(width, height);
@@ -48,28 +49,23 @@ function ThreeJSArea({ id = "" }) {
 
     window.addEventListener("resize", handleResize);
 
-    // // This does nothing. (should be doing somehting)
-    // const initPP = () => {
-    //   const renderPass = new RenderPass(scene, camera);
-    //   const bokehPass = new BokehPass(scene, camera, {
-    //     focus: 1,
-    //     aperture: 10,
-    //     maxblur: 0.01,
-    //   });
+    // // Post Processing
 
-    //   const outputPass = new ShaderPass(GammaCorrectionShader);
-    //   const composer = new EffectComposer(renderer);
+    // const composer = new EffectComposer(renderer);
+    // composer.addPass(new RenderPass(scene, camera));
 
-    //   composer.addPass(renderPass);
-    //   composer.addPass(bokehPass);
-    //   composer.addPass(outputPass);
+    // const effectFilm = new FilmPass(0.5, 1, 500, true);
+    // composer.addPass(effectFilm);
 
-    //   postprocessing.composer = composer;
-    //   postprocessing.bokeh = bokehPass;
-    // };
-    // initPP();
+    // const rgbshift = new ShaderPass(RGBShiftShader);
+    // rgbshift.uniforms["amount"].value = 0.003;
+    // composer.addPass(rgbshift);
+
+    // const outputPass = new ShaderPass(GammaCorrectionShader);
+    // composer.addPass(outputPass);
 
     const eachFrame = () => {
+      // composer.render();
       renderer.render(scene, camera);
 
       placeholderKnot.rotation.x += 0.0025;
