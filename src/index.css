@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Flow+Circular&family=Foldit&family=Gruppo&family=Monoton&family=Orbitron:wght@700&display=swap");
+/* 
+font-family: 'Flow Circular', cursive;
+font-family: 'Foldit', cursive;
+font-family: 'Gruppo', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Orbitron', sans-serif;
+ */
+
 * {
   margin: 0;
   color-scheme: dark !important;
-  font-family: monospace;
+  font-family: "Gruppo", sans-serif;
 }
 
 html {

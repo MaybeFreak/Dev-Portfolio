@@ -6,8 +6,8 @@ const Header = () => {
       </a>
       <nav>
         <a href="#About">About</a>
-        <a>Projects</a>
-        <a>Contact</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
       </nav>
     </header>
   );

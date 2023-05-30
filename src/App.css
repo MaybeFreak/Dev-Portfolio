@@ -5,7 +5,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 
   padding: 3rem;
   padding-bottom: 0;
@@ -36,19 +36,72 @@ a:hover {
   color: mediumspringgreen;
 }
 
-#About {
-  margin: auto;
-  width: 50%;
+section {
+  height: 100vh;
 }
 
-#About h2 {
-  font-size: 10rem;
-  color: white;
+#About,
+#Projects,
+#Contact {
+  opacity: 0;
+  padding-top: 5rem;
+  margin: auto;
+  width: 800px;
+  cursor: default;
+}
+
+.outlined span {
+  font-size: 8rem;
+  font-family: "Orbitron", sans-serif;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  transition: -webkit-text-stroke 0.8s;
+}
+
+.outlined span:hover {
+  -webkit-text-stroke: 2px mediumspringgreen;
 }
 
 #About p {
+  opacity: 0.8;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 2rem;
   width: 80%;
   margin: auto;
+}
+
+#About #More {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+#About h3 {
+  width: 85%;
+  margin: auto;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#About #More button {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  font-size: 1.75rem;
+  border: 2px solid white;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+#About #More button:hover {
+  color: mediumspringgreen;
+  border-color: mediumspringgreen;
 }
 
 #test {
@@ -57,6 +110,149 @@ a:hover {
   opacity: 0;
 }
 
-.scroll-area {
+.spacer {
+  height: 350px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  font-size: 1.5rem;
+
+  opacity: 0;
+}
+
+.modalContent {
+  max-width: 50%;
+  padding: 2rem;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.skillsList {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  list-style: circle;
+}
+
+.skillsList li {
+  margin-right: 2rem;
+}
+
+.project {
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: 2px solid white;
+  border-radius: 15px;
+
+  transition: all 0.8s;
+}
+
+.project:hover {
+  border-color: mediumspringgreen;
+}
+
+.project h2 {
+  display: flex;
+  font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.project p {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.project h2 a {
+  margin-left: auto;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  border: 2px solid white;
+  cursor: pointer;
+
+  transition: all 0.8s;
+}
+
+.project h2 a:hover {
+  color: black;
+  border-color: mediumspringgreen;
+  background-color: mediumspringgreen;
+}
+
+.project p a {
+  color: mediumspringgreen;
+  text-decoration: none;
+}
+
+.project p a:hover {
+  text-decoration: underline;
+}
+
+#ContactSub {
+  margin-left: 1.5rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.contactBox {
+  display: block;
+  max-width: fit-content;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  border: 2px solid white;
+  cursor: pointer;
+
+  transition: all 0.8s;
+}
+
+.contactBox p {
+  opacity: 0.8;
+}
+
+.contactBox:hover {
+  border-color: mediumspringgreen;
+  background-color: mediumspringgreen;
+  color: black;
+}
+
+#Thanks {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Thanks p {
+  font-size: 1.5rem;
+  opacity: 0.5;
 }
