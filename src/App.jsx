@@ -311,7 +311,7 @@ function App() {
             <a className="contactBox">
               <div>
                 <h3>Phone</h3>
-                <p>+49 157 71752969</p>
+                <p>+49 1577 1752969</p>
               </div>
             </a>
           </div>
