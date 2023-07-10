@@ -224,7 +224,7 @@ function App() {
               ASCII React Component{" "}
               <a
                 target="_blank"
-                href="https://github.com/MaybeFreak/Clip-Castle"
+                href="https://github.com/MaybeFreak/Text_to_ASCII_React_Component"
                 rel="noreferrer"
               >
                 Github Repo
